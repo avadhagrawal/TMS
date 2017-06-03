@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="../static/css/index_style.css" />
+  <!-- End WOWSlider.com HEAD section -->
+{% endblock %}
+{% block body %}
+
+
+
+
+<section id="ver-nav">
+<div class="container">
+<div class="row" style="margin-top: 12%; margin-bottom: 12%;">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<ul class="nav nav-pills nav-stacked">
+  <li role="presentation"><a href="{{url_for('view_tenders')}}">View Tenders</a></li> 
+  <li role="presentation" class="active"><a href="{{url_for('profile_nodal')}}">Profile Settings</a></li>
+    <li role="presentation"><a href="{{url_for('applications')}}">Applications Received</a></li>
+</ul>
+</div>
+<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="margin-top: -08%;">
+  <h3 style="text-align: center;">Ministry Profile</h3>
+<hr>
+    <div class="row" style="padding: 10%; background-color: lightgrey;">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="font-size: 1.2em;">
+                    <p><b>Login ID:</b></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="font-size:1.2em;">
+                    <p>{{ login.nEmail }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="font-size: 1.2em;">
+                    <p><b>Name:</b></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="color: white; font-size:1.2em;">
+                    <p>{{ login.dName }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="font-size: 1.2em;">
+                    <p><b>Mobile No:</b></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="color: white; font-size:1.2em;">
+                    <p>{{ login.nCon }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="font-size: 1.2em;">
+                    <p><b>Address:</b></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6" style="color: white; font-size:1.2em;">
+                    <p>{{ login.nAddr }}</p>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+  {% endblock %}
